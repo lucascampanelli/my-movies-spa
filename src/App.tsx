@@ -1,6 +1,7 @@
 import './App.css'
 import { Header } from './components/Header'
 import { MoviesList } from './components/MoviesList'
+import { MoviesConteiner } from './styles/MoviesConteiner'
 
 
 
@@ -10,9 +11,9 @@ function App() {
     <>
       <Header/>
 
-      <section>
+      <MoviesConteiner>
         <MoviesList movies={[]}/>
-      </section>
+      </MoviesConteiner>
     </>
   )
 }
