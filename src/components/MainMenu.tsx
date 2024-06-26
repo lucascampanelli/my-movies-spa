@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { MainMenuConteiner } from "../styles/MainMenuContainer";
 
 
@@ -5,8 +6,8 @@ import { MainMenuConteiner } from "../styles/MainMenuContainer";
 export const MainMenu = () => (
     <MainMenuConteiner>
         <ul>
-            <li>Home</li>
-            <li>Sobre</li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="about">Sobre</NavLink></li>
         </ul>
     </MainMenuConteiner>
 )

@@ -1,37 +1,31 @@
-import { useEffect, useState } from 'react'
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
 import { Header } from './components/Header'
-import { MoviesList } from './components/MoviesList'
-import { MoviesConteiner } from './styles/MoviesConteiner'
-import { MovieService } from './api/MovieService'
+import { Home } from './views/Home';
+import { About } from './views/About';
 
 
 
-function App() {
-
-  const [movies, setMovies] = useState([]);
-
-  const fetchMovies = async () => {
-
-    // Obtendo o atributo "data" da resposta da API
-    const { data}  = await MovieService.getMovies();
-
-    setMovies(data.results)
+// Rotas possíveis da aplicação de página única
+const router = createBrowserRouter([
+  {
+    path: "",
+    element: <div><Header/><Outlet/></div>,
+    children: [
+      {
+        path: "",
+        element: <Home/>
+      },
+      {
+        path: "about",
+        element: <About/>
+      }
+    ]
   }
+]);
 
-  useEffect(() => {
-    fetchMovies()
-  }, [])
 
-  return (
-    <>
-      <Header/>
 
-      <MoviesConteiner>
-        <MoviesList movies={movies}/>
-      </MoviesConteiner>
-    </>
-  )
-}
+const App = () => <RouterProvider router={router}/>
 
 export default App
