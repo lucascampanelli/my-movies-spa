@@ -3,6 +3,7 @@ import './App.css'
 import { Header } from './components/Header'
 import { Home } from './views/Home';
 import { About } from './views/About';
+import { MovieDetail } from './views/MovieDetail';
 
 
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About/>
+      },
+      {
+        path: "/movie/:id",
+        element: <MovieDetail/>
       }
     ]
   }

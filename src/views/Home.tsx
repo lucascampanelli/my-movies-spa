@@ -12,7 +12,7 @@ export const Home = () => {
     const fetchMovies = async () => {
 
         // Obtendo o atributo "data" da resposta da API
-        const { data}  = await MovieService.getMovies();
+        const { data } = await MovieService.getMovies();
 
         setMovies(data.results)
     }
