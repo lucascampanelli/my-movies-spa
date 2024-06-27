@@ -1,10 +1,10 @@
-<div style="display: flex; width: 100%; justify-content: center">
+<div align="center">
 
   <img width="200" src="https://raw.githubusercontent.com/lucascampanelli/my-movies-spa/master/undraw_home_cinema_l7yl_blue.svg"/>
-  
+
 </div>
 
-<p align="center" style="font-size: 10.5px">Illustration by <a href="https://undraw.co/" target="_blank">unDraw</a></p>
+<p align="center" style="font-size: 10px">Illustration by <a href="https://undraw.co/" target="_blank">unDraw</a></p>
 
 
 # My Movies
